@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://d1ynbm7eiigsd"]
+
+[sub_resource type="TileSet" id="TileSet_hd1fb"]
+tile_size = Vector2i(32, 32)
+physics_layer_0/collision_layer = 1
+
+[node name="TileMapPathFind" type="TileMap"]
+tile_set = SubResource("TileSet_hd1fb")
+format = 2

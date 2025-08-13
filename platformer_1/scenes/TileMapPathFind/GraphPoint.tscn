@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://d2dammerxadj4"]
+
+[ext_resource type="Script" uid="uid://dpc7jo8ffhu5h" path="res://scripts/graphPoint.cs" id="1_rp0yf"]
+[ext_resource type="Texture2D" uid="uid://roid88tik0xi" path="res://sprites/graphpoint.png" id="2_4p8ki"]
+
+[node name="GraphPoint" type="Node2D"]
+script = ExtResource("1_rp0yf")
+
+[node name="Graphpoint" type="Sprite2D" parent="."]
+texture = ExtResource("2_4p8ki")

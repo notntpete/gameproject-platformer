@@ -1,0 +1,25 @@
+[gd_scene load_steps=4 format=3 uid="uid://bxldu704k8ll8"]
+
+[ext_resource type="PackedScene" uid="uid://5vsujux647t3" path="res://scenes/Player.tscn" id="1_glv2v"]
+[ext_resource type="Texture2D" uid="uid://dl6roqy73a2tn" path="res://sprites/dungeonBrick1.png" id="2_uu6xs"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_glv2v"]
+size = Vector2(1150, 222)
+
+[node name="Node2D" type="Node2D"]
+position = Vector2(28, -33)
+
+[node name="CharacterBody2D" parent="." instance=ExtResource("1_glv2v")]
+position = Vector2(529, 401)
+
+[node name="SampleGround" type="StaticBody2D" parent="."]
+position = Vector2(522, 463)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="SampleGround"]
+position = Vector2(26, 106)
+shape = SubResource("RectangleShape2D_glv2v")
+debug_color = Color(0.638619, 0.525568, 0, 0.42)
+
+[node name="Sprite2D" type="Sprite2D" parent="SampleGround"]
+position = Vector2(5, 11)
+texture = ExtResource("2_uu6xs")

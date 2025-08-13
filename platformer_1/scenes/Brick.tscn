@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://cpgp03tmo7n5v"]
+
+[ext_resource type="Texture2D" uid="uid://dl6roqy73a2tn" path="res://sprites/dungeonBrick1.png" id="1_y4mou"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0fr63"]
+size = Vector2(32, 32)
+
+[node name="Platform1" type="Node2D"]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+collision_layer = 255
+collision_mask = 255
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D"]
+texture = ExtResource("1_y4mou")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+shape = SubResource("RectangleShape2D_0fr63")

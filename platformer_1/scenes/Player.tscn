@@ -1,0 +1,36 @@
+[gd_scene load_steps=5 format=3 uid="uid://5vsujux647t3"]
+
+[ext_resource type="Texture2D" uid="uid://cqr0vwbx4g7g8" path="res://sprites/RefChar1.png" id="1_p0vlq"]
+[ext_resource type="Script" uid="uid://cvuv03n4wui15" path="res://scripts/Player.cs" id="2_v6fml"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_v6fml"]
+size = Vector2(1.525e+06, 2.6e+06)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_v6fml"]
+
+[node name="Player" type="CharacterBody2D"]
+position = Vector2(2, 0)
+scale = Vector2(1, 0.944672)
+collision_mask = 2
+script = ExtResource("2_v6fml")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0, 1)
+texture = ExtResource("1_p0vlq")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 4)
+scale = Vector2(1e-05, 1e-05)
+shape = SubResource("RectangleShape2D_v6fml")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(0, 4)
+
+[node name="AttackArea" type="Area2D" parent="."]
+position = Vector2(14, 3.17571)
+collision_layer = 2
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AttackArea"]
+position = Vector2(4, 1.05857)
+shape = SubResource("CircleShape2D_v6fml")
